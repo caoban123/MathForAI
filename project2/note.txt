@@ -1,0 +1,26 @@
+1. PCA (Principal Component Analysis) - "Nhiếp ảnh gia chọn góc chụp bao quát"
+PCA không quan tâm học sinh đó thuộc lớp nào (A, B hay C). Nó chỉ quan tâm đến việc làm sao để bức ảnh "trông hoành tráng nhất" và ít bị mất thông tin nhất.
+
+Cách làm: Người thợ này sẽ bay flycam đi tìm góc nhìn mà ở đó nhóm học sinh dàn trải ra rộng nhất (phương sai lớn nhất).
+
+Kết quả: Bức ảnh chụp được sẽ giữ lại cái "khung" chính của cả đám đông. Tuy nhiên, vì chỉ chọn góc chụp thẳng, nên có thể vài học sinh lớp A và lớp B đứng hơi gần nhau sẽ bị chụp đè lên nhau trong ảnh 2D.
+
+Điểm yếu: Nó có thể làm các lớp bị lẫn lộn nếu chúng đứng chồng chéo trong không gian gốc.
+
+2. LDA (Linear Discriminant Analysis) - "Người sắp xếp đội hình theo lớp"
+LDA là một người thợ cực kỳ nguyên tắc. Họ biết rõ ai thuộc lớp nào và mục tiêu duy nhất là "phải phân biệt được các lớp" trong ảnh.
+
+Cách làm: Trước khi chụp, người này sẽ yêu cầu: "Các em lớp A hãy đứng chụm lại thành một cụm thật chặt, các em lớp B cũng vậy. Và hai lớp phải đứng cách xa nhau ra!". LDA tìm một hướng chiếu mà ở đó khoảng cách giữa các lớp là xa nhất và sự lộn xộn trong mỗi lớp là nhỏ nhất.
+
+Kết quả: Bức ảnh cực kỳ rõ ràng về mặt phân loại. Bạn nhìn vào là biết ngay đâu là lớp A, đâu là lớp B.
+
+Điểm yếu: Nó có thể làm méo mó hình dáng thật của "đám đông" ban đầu vì nó quá tập trung vào việc tách lớp.
+
+3. t-SNE - "Người thợ sắp xếp từng nhóm bạn thân"
+Như bạn đã nói, đây là người thợ tỉ mỉ, quan tâm đến các mối quan hệ cá nhân (phi tuyến).
+
+Cách làm: Họ không tìm góc chụp, họ di chuyển từng người một. Họ hỏi từng học sinh: "Em hay chơi với ai?". Sau đó, họ xếp những đôi bạn thân ngồi cạnh nhau trên một cái chiếu nhỏ. Nếu hai người không quen nhau, họ sẽ đẩy ra thật xa.
+
+Kết quả: Tạo ra những "vòng tròn tình bạn" (cụm dữ liệu) cực kỳ rõ rệt và đẹp mắt.
+
+Điểm yếu: Nếu bạn hỏi "Khoảng cách giữa nhóm bạn thân A và nhóm bạn thân B trên ảnh có đúng với thực tế không?", câu trả lời thường là Không. t-SNE chỉ giỏi gom cụm, còn khoảng cách giữa các cụm không còn giữ đúng tỉ lệ thực tế.
